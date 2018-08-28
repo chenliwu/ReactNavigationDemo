@@ -1,7 +1,9 @@
 import { AppRegistry } from 'react-native';
 
 //import StackNavigatorBasics from './src/StackNavigatorBasics';
-import StackNavigatorBasics from './src/StackNavigatorBasics_2';
+import StackNavigatorBasics from './src/StackNavigation/StackNavigatorBasics_2';
+import TabNavigatorBasics from './src/TabNavigation/TabNavigationBasics';
 
 //AppRegistry.registerComponent('ReactNavigationDemo', () => App);
-AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
+//AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
+AppRegistry.registerComponent('ReactNavigationDemo', () => TabNavigatorBasics);

@@ -114,7 +114,10 @@ const RootStack = createStackNavigator(
     },
     {
         initialRouteName: 'Home',
-        /* The header config from HomeScreen is now here */
+        /*
+        The header config from HomeScreen is now here
+        跨页面共享通用的navigationOptions
+        */
         navigationOptions: {
             headerStyle: {
                 backgroundColor: '#f4511e',
