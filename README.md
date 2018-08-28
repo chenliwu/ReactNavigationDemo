@@ -1,2 +1,1 @@
-"#Reacy Nativeµ¼º½Æ÷Á·Ï°" 
-"# ReactNavigationDemo" 
+# React Navigationå¯¼èˆªå™¨ç»ƒä¹ 
