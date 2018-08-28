@@ -9,7 +9,10 @@ import {createStackNavigator} from 'react-navigation';
 //import DetailsScreen from './DetailsScreen';
 
 /**
+ *
+ 创建一个 stack navigator
  摘要
+
  （1）React Native没有像Web浏览器那样的内置API用于导航。 React Navigation为您提供此功能，以及在iOS和Android上进行页面切换手势和动画。
 
  （2）createStackNavigator是一个函数，它接受一个路由配置对象和一个可选对象并返回一个 React 组件。
@@ -76,16 +79,6 @@ class DetailsScreen extends React.Component {
     }
 }
 
-/**
- *
- 创建一个 stack navigator
- createStackNavigator是一个返回 React 组件的方法。
- 它需要 a route configuration object（一个路由配置对象） 和 an options object（一个可选对象） (现在我们忽略下面的内容).
- 由于createStackNavigator函数会返回一个React组件，因此我们可以直接从App.js中导出它以用作我们应用程序的根组件。
-
- * @author: chenlw
- * @date: 2018/8/28  12:36
- */
 
 /**
  *
@@ -112,6 +105,7 @@ const RootStack = createStackNavigator(
                 headerTitle:'导航栏标题',    //设置导航栏标题，推荐
                 headerBackTitle:'',         //设置跳转页面左侧返回箭头后面的文字，默认是上一个页面的标题。可以自定义，也可以设置为null
                 gesturesEnabled:true,       //是否支持滑动返回手势，iOS默认支持，安卓默认关闭
+                headerTintColor:'red'            //设置导航栏颜色
             }
         }
     },
@@ -120,7 +114,7 @@ const RootStack = createStackNavigator(
     }
 );
 
-export default class HomeScreenBasics extends React.Component {
+export default class StackNavigatorBasics extends React.Component {
     render() {
         return <RootStack/>;
     }
