@@ -9,7 +9,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
     createBottomTabNavigator
 } from 'react-navigation';
-
+/**
+ * 在Tab 之间切换
+ * 从一个 Tab 切换到另一个 Tab 有一个我们熟悉的API — this.props.navigation.navigate。
+ */
 
 class HomeScreen extends React.Component {
     render() {
@@ -55,7 +58,7 @@ class SettingsScreen extends React.Component {
 }
 
 
-/**    }
+/**
 
 
  自定义外观

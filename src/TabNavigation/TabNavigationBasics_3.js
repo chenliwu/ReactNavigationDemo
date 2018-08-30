@@ -11,7 +11,13 @@ import {
     createStackNavigator
 } from 'react-navigation';
 
-
+/**
+ * 
+ * 每个 Tab 的 stack navigator
+通常， tabs 不仅仅显示一个页面 — 例如，在你的 Twitter 上，您可以点击一条 tweet，它将会把你带到某个 Tab 的一个新页面，
+该页面包含关于这条 tweet 的所有回复。 
+你可以将此视为在每个选项卡中存在单独的导航堆栈，这正是我们在 React Navigation 中对其进行建模的方式。
+ */
 
 class DetailsScreen extends React.Component{
     render(){
