@@ -6,6 +6,9 @@ import { AppRegistry } from 'react-native';
 
 import NavigationProp_Test from './src/NavigationProp_Test/NavigationPropTest_1';
 
+
+import DeawerNavigator from './src/DrawerNavigation/DrawerNavigation_1';
+
 //AppRegistry.registerComponent('ReactNavigationDemo', () => App);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
-AppRegistry.registerComponent('ReactNavigationDemo', () => NavigationProp_Test);
+AppRegistry.registerComponent('ReactNavigationDemo', () => DeawerNavigator);
