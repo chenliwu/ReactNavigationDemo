@@ -27,6 +27,15 @@ import {createStackNavigator} from 'react-navigation';
 
  */
 
+/**
+
+ navigation.navigate({routeName, params, action, key}) 或 navigation.navigate(routeName, params, action)
+（1）routeName - 已在应用程序路由器中某处注册的目标routeName
+（2）params - 合并到目标路由的参数
+（3）action - (advanced) The sub-action to run in the child router, if the screen is a navigator.
+    See Actions Doc for a full list of supported actions. （高级选项）如果叶脉你是 navigator，则是在子路由中运行的子操作。
+*/
+
 class HomeScreen extends React.Component {
 
     constructor(props) {
@@ -34,6 +43,7 @@ class HomeScreen extends React.Component {
     }
 
     render() {
+
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                 <Text>Home Screen</Text>
@@ -52,6 +62,7 @@ class HomeScreen extends React.Component {
 
 class DetailsScreen extends React.Component {
     render() {
+        //获取页面传递过来的参数值: value = this.props.navigation.getParam("key)
         const {navigation} = this.props;
         const itemId = navigation.getParam('itemId', 'NO-ID');
         const otherParam = navigation.getParam('otherParam', 'some default value');
