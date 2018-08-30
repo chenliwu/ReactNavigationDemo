@@ -9,21 +9,53 @@ import DetailsPage from './DetailsPage';
 
 import SettingsPage from './SettingsPage';
 
-const HomeStack = createStackNavigator({
-    Home:HomePage,
-    Details:DetailsPage,
-});
+const HomeStack = createStackNavigator(
+    {
+        Home: {
+            screen:HomePage,
+            navigationOptions:{
+                headerTitle:"Home",
+                gesturesEnabled:true
+            },
+        },
+        Details:{
+            screen:DetailsPage,
+            navigationOptions:{
+                headerTitle:"Details",
+                gesturesEnabled:true
+            },
+        }
+    },
+    {
+        initialRouteName:"Home",
+    }
+);
 
-const SettingsStack = createStackNavigator({
-    Settings:SettingsPage,
-    Details:DetailsPage,
-});
+const SettingsStack = createStackNavigator(
+    {
+        Settings: {
+            screen:SettingsPage,
+            navigationOptions:{
+                headerTitle:"Settings",
+                gesturesEnabled:true
+            },
+        },
+        Details:{
+            screen:DetailsPage,
+            headerTitle:"Details",
+            gesturesEnabled:true
+        }
+    },
+    {
+        initialRouteName:"Settings",
+    }
+);
 
 
 const MyBottomTabNavigator = createBottomTabNavigator(
     {
-        Home:HomeStack,
-        Settings:SettingsStack,
+        Home: HomeStack,
+        Settings: SettingsStack,
     },
     {
         tabBarOptions: {
@@ -31,11 +63,11 @@ const MyBottomTabNavigator = createBottomTabNavigator(
             inactiveTintColor: 'gray',  //label和icon的背景色，不活跃状态下
         },
     }
-    
+
 );
 
-export default class MyTabNavigator extends React.Component{
-    render(){
+export default class MyTabNavigator extends React.Component {
+    render() {
         return (
             <MyBottomTabNavigator></MyBottomTabNavigator>
         );
