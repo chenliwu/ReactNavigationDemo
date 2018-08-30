@@ -82,8 +82,9 @@ const MyApp = createDrawerNavigator({
         screen: MyNotification,
     }},
     {
+        initialRouteName:"Notification",  //第一次加载时初始选项卡路由的 routeName。
         drawerWidth:Dimensions.get('window').width/2,   //抽屉的宽度或返回它的函数。
-        drawerPosition:'left',      //选项为 左 或 右. 默认值为 左 位置。
+        drawerPosition:'left',          //选项为 左 或 右. 默认值为 左 位置。
         drawerBackgroundColor:'white',   //使用某种颜色的抽屉背景。默认值为 白色。
     }
 );

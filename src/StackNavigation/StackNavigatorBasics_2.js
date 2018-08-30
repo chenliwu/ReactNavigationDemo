@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
     View,
     Text,
     Button
 } from 'react-native';
-import {createStackNavigator} from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 
 /**
@@ -31,14 +31,14 @@ class HomeScreen extends Component {
 
     render() {
         return (
-            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Home Screen</Text>
                 <Button
                     title="Go to Details"
                     onPress={() => this.props.navigation.navigate("Details", {
-                            itemId: 86,
-                            otherParam: 'anything you want here',
-                        }
+                        itemId: 86,
+                        otherParam: 'anything you want here',
+                    }
                     )}
                 />
             </View>
@@ -70,25 +70,25 @@ class HomeScreen extends Component {
 class DetailsScreen extends Component {
 
     //使用otherParam作为屏幕的标题，通过按钮点击事件setParams动态改变标题内容
-    static navigationOptions = ({navigation}) => {
+    static navigationOptions = ({ navigation }) => {
         return {
             title: navigation.getParam('otherParam', 'A Nested Details Screen'),
         };
     };
 
     render() {
-        const {navigation} = this.props;
+        const { navigation } = this.props;
         const itemId = navigation.getParam('itemId', 'NO-ID');
         const otherParam = navigation.getParam('otherParam', 'some default value');
 
         return (
-            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Details Screen</Text>
                 <Text>itemId: {JSON.stringify(itemId)}</Text>
                 <Text>otherParam: {JSON.stringify(otherParam)}</Text>
                 <Button
                     title="Update the title"
-                    onPress={() => this.props.navigation.setParams({otherParam: 'Updated!'})}
+                    onPress={() => this.props.navigation.setParams({ otherParam: 'Updated!' })}
                 />
             </View>
         );
@@ -132,7 +132,7 @@ const RootStack = createStackNavigator(
 
 export default class StackNavigatorBasics extends React.Component {
     render() {
-        return <RootStack/>;
+        return <RootStack />;
     }
 }
 
