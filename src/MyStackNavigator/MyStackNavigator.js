@@ -19,8 +19,21 @@ import DetailsPage from './DetailsPage';
  */
 const MyStackNavigator = createStackNavigator(
     {
-        Home: HomePage,
-        Details: DetailsPage,
+        Home: {
+            screen:HomePage,        //指定屏幕的组件。
+            navigationOptions:{     //配置StackNavigator的一些属性。
+                headerTitle:'Home', //设置导航栏标题
+                
+            }
+        },
+        Details: {
+            screen:DetailsPage,
+            navigationOptions:{
+                headerTitle:'Details',
+                gesturesEnabled:true,   //是否支持滑动返回手势，iOS默认支持，安卓默认关闭
+            }
+        }
+
     },
     {
         initialRouteName: "Home",  //设置堆栈的默认屏幕。
