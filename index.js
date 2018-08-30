@@ -9,7 +9,9 @@ import DeawerNavigator from './src/DrawerNavigation/DrawerNavigation_1';
 
 import MyStackNavigator from './src/MyStackNavigator/MyStackNavigator';
 
+import MyTabNavigator from './src/MyTabNavigator/MyTabNavigator';
+
 //AppRegistry.registerComponent('ReactNavigationDemo', () => App);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => DeawerNavigator);
-AppRegistry.registerComponent('ReactNavigationDemo', () => MyStackNavigator);
+AppRegistry.registerComponent('ReactNavigationDemo', () => MyTabNavigator);
