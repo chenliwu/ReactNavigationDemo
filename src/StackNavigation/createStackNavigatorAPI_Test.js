@@ -8,14 +8,15 @@ import { createStackNavigator } from 'react-navigation';
 
 
 /**
+createStackNavigator
 
- 设置标题栏显示的标题
+API定义：createStackNavigator(RouteConfigs, StackNavigatorConfig);
 
- 每个页面组件可以有一个名为navigationOptions的静态属性，它是一个对象或一个返回包含各种配置选项的对象的函数。
+为你的应用程序提供一种在每个新屏幕放置在堆栈顶部的屏幕之间转换的方法。
 
- 我们用于设置标题栏的标题的是title这个属性，如以下示例所示。
-
- createStackNavigator默认情况下按照平台惯例设置，所以在iOS上标题居中，在Android上左对齐。
+默认情况下，stack navigator 被配置为具有熟悉的iOS和Android外观 & 感觉：
+新屏幕从iOS右侧滑入，从Android底部淡入。 
+在iOS上，stack navigator 也可以配置为屏幕从底部滑入的模式样式。
 
  *
  */
@@ -45,27 +46,6 @@ class HomeScreen extends Component {
         );
     }
 }
-
-/**
-
- 传递给navigationOptions函数的参数是具有以下属性的对象：
-
- （1）navigation - 页面的 导航属性 ，在页面中的路由为navigation.state。
- （2）screenProps - 从导航器组件上层传递的 props
- （3）navigationOptions - 如果未提供新值，将使用的默认或上一个选项
- 在上面的示例中，我们只需要navigation 属性，但在某些情况下，你可能需要使用screenProps或navigationOptions。
-
- */
-
-/**
- *
-
- 使用setParams更新navigationOptions
-
- 通常有必要从已加载的页面组件本身更新当前页面的navigationOptions配置。 我们可以使用this.props.navigation.setParams来做到这一点
-
-
- */
 
 class DetailsScreen extends Component {
 
@@ -104,7 +84,6 @@ class DetailsScreen extends Component {
  （2）headerTintColor：返回按钮和标题都使用这个属性作为它们的颜色。 在下面的例子中，我们将 tint color 设置为白色（#fff），所以返回按钮和标题栏标题将变为白色。
  （3）headerTitleStyle：如果我们想为标题定制fontFamily，fontWeight和其他Text样式属性，我们可以用它来完成。
 
-
  */
 
 const RootStack = createStackNavigator(
@@ -126,8 +105,14 @@ const RootStack = createStackNavigator(
             headerTitleStyle: {
                 fontWeight: 'bold',
             },
+            gesturesEnabled:true,    //是否允许使用手势来关闭页面，在 iOS 上默认为true，在 Android 上默认为false。
         },
-        headerMode:'screen', //指定页眉的呈现方式:IOS默认float；Android默认screen
+        headerMode:'float', //(float,screen,none)指定页眉的呈现方式:IOS默认float；Android默认screen
+        headerBackTitleVisible:false,   //提供合理的默认值以确定后退按钮标题是否可见，默认false
+        headerTransitionPreset:'fade-in-place', //指定页眉应如何从一个屏幕过渡到另一屏时的动画。
+
+        headerLayoutPreset:'center',   //指定Header组件如何布局（left,center），没有right。IOS默认center，Android默认left
+
     }
 );
 

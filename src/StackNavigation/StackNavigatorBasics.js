@@ -96,7 +96,6 @@ const RootStack = createStackNavigator(
         Home: {
             screen: HomeScreen,     //screen：对应界面名称，需要填入import之后的页面
             navigationOptions:{     //navigationOptions 配置StackNavigator的一些属性
-
                 //title:'标题',               //标题，如果设置了这个导航栏和标签栏的title就会变成一样的，不推荐使用
                 headerTitle:'导航栏标题',     //设置导航栏标题，推荐
             }
@@ -107,7 +106,7 @@ const RootStack = createStackNavigator(
                 headerTitle:'导航栏标题',    //设置导航栏标题，推荐
                 headerBackTitle:'',         //设置跳转页面左侧返回箭头后面的文字，默认是上一个页面的标题。可以自定义，也可以设置为null
                 gesturesEnabled:true,       //是否支持滑动返回手势，iOS默认支持，安卓默认关闭
-                headerTintColor:'red'            //设置导航栏颜色
+                headerTintColor:'red',       //设置导航栏颜色
             }
         }
     },

@@ -106,11 +106,11 @@ const RootStack = createStackNavigator(
             navigationOptions: {
                 headerTitle: 'DetailsScreen',    //设置导航栏标题，推荐
                 headerBackTitle: '返回',         //设置跳转页面左侧返回箭头后面的文字，默认是上一个页面的标题。可以自定义，也可以设置为null
-                gesturesEnabled: true,       //是否支持滑动返回手势，iOS默认支持，安卓默认关闭
+                gesturesEnabled: true,          //是否支持滑动返回手势，iOS默认支持，安卓默认关闭
                 headerTintColor:'red',          //设置导航栏颜色
                 headerPressColorAndroid:'blue'  //安卓独有的设置颜色纹理，需要安卓版本大于5.0
             },
-            mode:'card'            //定义跳转风格：card：使用iOS和安卓默认的风格；modal：iOS独有的使屏幕从底部画出。类似iOS的present效果
+            mode:'card',            //定义跳转风格：card：使用iOS和安卓默认的风格；modal：iOS独有的使屏幕从底部画出。类似iOS的present效果
         }
     },
     {
