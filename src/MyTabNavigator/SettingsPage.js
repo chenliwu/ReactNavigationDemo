@@ -12,6 +12,9 @@ export default class SettingsPage extends React.Component{
         return (
             <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
                 <Text>Settings Page</Text>
+                <Button title="Go to Details" onPress={() => {
+                    this.props.navigation.navigate("Details");
+                }}></Button>
             </View>
         );
     }

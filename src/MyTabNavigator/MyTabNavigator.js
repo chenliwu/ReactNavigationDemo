@@ -12,42 +12,45 @@ import SettingsPage from './SettingsPage';
 const HomeStack = createStackNavigator(
     {
         Home: {
-            screen:HomePage,
-            navigationOptions:{
-                headerTitle:"Home",
-                gesturesEnabled:true
+            screen: HomePage,
+            navigationOptions: {
+                headerTitle: "Home",
+                gesturesEnabled: true
             },
         },
-        Details:{
-            screen:DetailsPage,
-            navigationOptions:{
-                headerTitle:"Details",
-                gesturesEnabled:true
+        Details: {
+            screen: DetailsPage,
+            navigationOptions: {
+                headerTitle: "Details",
+                gesturesEnabled: true
             },
         }
     },
     {
-        initialRouteName:"Home",
+        initialRouteName: "Home",
     }
 );
 
 const SettingsStack = createStackNavigator(
     {
         Settings: {
-            screen:SettingsPage,
-            navigationOptions:{
-                headerTitle:"Settings",
-                gesturesEnabled:true
+            screen: SettingsPage,
+            navigationOptions: {
+                headerTitle: "Settings",
+                gesturesEnabled: true
             },
         },
-        Details:{
-            screen:DetailsPage,
-            headerTitle:"Details",
-            gesturesEnabled:true
+        Details: {
+            screen: DetailsPage,
+            headerTitle: "Details",
+            navigationOptions: {
+                headerTitle: "Details",
+                gesturesEnabled: true
+            },
         }
     },
     {
-        initialRouteName:"Settings",
+        initialRouteName: "Settings",
     }
 );
 
