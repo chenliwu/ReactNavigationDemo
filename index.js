@@ -14,7 +14,12 @@ import MyTabNavigator from './src/MyTabNavigator/MyTabNavigator';
 
 import createSwitchNavigator_Test from './src/createSwitchNavigator/createSwitchNavigator_Test';
 
+import StatusBar_Test from './src/StatusBar/StatusBar_Test';
+
+import navigationOptions_Test from './src/navigationOptions_Test/navigationOptions_Test4';
+
 //AppRegistry.registerComponent('ReactNavigationDemo', () => App);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => DeawerNavigator);
-AppRegistry.registerComponent('ReactNavigationDemo', () => createSwitchNavigator_Test);
+//AppRegistry.registerComponent('ReactNavigationDemo', () => createSwitchNavigator_Test);
+AppRegistry.registerComponent("ReactNavigationDemo",() => navigationOptions_Test);
