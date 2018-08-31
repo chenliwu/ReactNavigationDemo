@@ -12,7 +12,9 @@ import DeawerNavigator from './src/DrawerNavigation/DrawerNavigation_1';
 import MyStackNavigator from './src/MyStackNavigator/MyStackNavigator';
 import MyTabNavigator from './src/MyTabNavigator/MyTabNavigator';
 
+import createSwitchNavigator_Test from './src/createSwitchNavigator/createSwitchNavigator_Test';
+
 //AppRegistry.registerComponent('ReactNavigationDemo', () => App);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => DeawerNavigator);
-AppRegistry.registerComponent('ReactNavigationDemo', () => createBottomTabNavigatorAPI_Test);
+AppRegistry.registerComponent('ReactNavigationDemo', () => createSwitchNavigator_Test);
