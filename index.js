@@ -14,8 +14,10 @@ import StatusBar_Test from './src/StatusBar/StatusBar_Test';
 import navigationOptions_Test from './src/navigationOptions_Test/navigationOptions_Test4';
 import BytterLaunchPage from './src/bytter/pages/LaunchPage';
 
+import ReduxTest from './src/Redux/ReduxTest';
+
 //AppRegistry.registerComponent('ReactNavigationDemo', () => App);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => StackNavigatorBasics);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => DeawerNavigator);
 //AppRegistry.registerComponent('ReactNavigationDemo', () => createSwitchNavigator_Test);
-AppRegistry.registerComponent("ReactNavigationDemo",() => BytterLaunchPage);
+AppRegistry.registerComponent("ReactNavigationDemo",() => ReduxTest);

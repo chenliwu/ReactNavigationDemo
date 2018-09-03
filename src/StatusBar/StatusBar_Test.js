@@ -76,13 +76,13 @@ const MyStackNavigator = createStackNavigator(
         },
     },
     {
-        initialRouteName:'Screen1',
+        initialRouteName: 'Screen1',
         headerMode: 'none',
     }
 );
 
-export default class App extends React.Component{
-    render(){
+export default class App extends React.Component {
+    render() {
         return (
             <MyStackNavigator></MyStackNavigator>
         );
